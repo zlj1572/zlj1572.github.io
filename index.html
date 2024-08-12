@@ -17,12 +17,10 @@
 
 </body>
     
+<script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.4.1/vconsole.min.js"></script>
 <script>
-  let consoleScript = document.createElement("script");
-      consoleScript.src = "https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js";
-      consoleScript.onload = function () {
-        new VConsole()
-      }
-      document.head.appendChild(consoleScript);
+  // init vConsole
+  var vConsole = new VConsole();
+  console.log('Hello world');
 </script>
 </html>
