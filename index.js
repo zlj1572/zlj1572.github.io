@@ -1,12 +1,12 @@
 var port;
 function sendDataToApp() {
     console.log('Sending data to application...');
-    window.postMessage("{\"message\":\"some message\"}");
+    port.postMessage("{\"message\":\"some message\"}");
 }
 
 function sendNavigationCommand() {
     console.log('Sending navigation command...');
-    window.postMessage("{\"message\":\"navigation command\"}");
+    port.postMessage("{\"message\":\"navigation command\"}");
 }
 
 function navigateToAnotherScreen(url) {
