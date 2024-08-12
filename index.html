@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button to Android App</title>
+    <script>
+        window.addEventListener('message', function(event) {
+            // 确认消息来源是预期的
+            if (event.origin !== 'https://zlj1572.github.io') return;
+
+            // 处理消息
+            console.log('Received message:', event.data);
+        }, false);
+    </script>
 </head>
 <body>
     <a href="https://zlj1572.github.io/">
