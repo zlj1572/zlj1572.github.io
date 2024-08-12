@@ -26,7 +26,7 @@ function displayReceivedData(msg) {
 
 window.addEventListener("message", function (event) {
     // optionally check for the origin to be your app
-    // if (!event.origin.includes("YOUR_PACKAGE_NAME")) return;
+    if (!event.origin.includes("YOUR_PACKAGE_NAME")) return;
 
     // get the port then use it for communication.
     port = event.ports[0];
