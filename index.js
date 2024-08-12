@@ -30,6 +30,7 @@ window.addEventListener("message", function (event) {
 
     // get the port then use it for communication.
     port = event.ports[0];
+    console.log('port');
     if (typeof port === 'undefined') return;
 
     // Post message on this port.
