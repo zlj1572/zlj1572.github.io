@@ -27,7 +27,8 @@ function displayReceivedData(msg) {
 window.addEventListener("message", function (event) {
     // optionally check for the origin to be your app
     console.log("origin:",event.origin)
-    console.log("data",event.data)
+    console.log("data:",event.data)
+    console.log("event:",event)
     // if (!event.origin.includes("YOUR_PACKAGE_NAME")) return;
 
     // get the port then use it for communication.
@@ -42,7 +43,7 @@ window.addEventListener("message", function (event) {
 
     // Receive upcoming messages on this port.
     port.onmessage = function(event) {
-        console.log("message",event.data)
+        console.log("message",event.data);
         const json = JSON.parse(event.data);
         console.log("json ~> " + JSON.stringify(json));
 
