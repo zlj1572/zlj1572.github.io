@@ -16,4 +16,13 @@
 <script src="../index.js"></script>
 
 </body>
+    
+<script>
+  let consoleScript = document.createElement("script");
+      consoleScript.src = "https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js";
+      consoleScript.onload = function () {
+        new VConsole()
+      }
+      document.head.appendChild(consoleScript);
+</script>
 </html>
