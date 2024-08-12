@@ -7,6 +7,7 @@
     <title>Button to Android App</title>
     <script>
         window.addEventListener('message', function(event) {
+            console.log('Received message:', event.data);
             // 确认消息来源是预期的
             if (event.origin !== 'https://zlj1572.github.io') return;
 
@@ -19,5 +20,21 @@
     <a href="https://zlj1572.github.io/">
         <button type="button">Open Android App</button>
     </a>
+        <button onclick="sendMessage()">Send Message</button>
+
+    <script>
+        function sendMessage() {
+            if (navigator.setMessageHandler) {
+                navigator.setMessageHandler('myCommand', function(data) {
+                    console.log('Received message:', data.data);
+                    // 处理从应用发送回来的消息
+                });
+
+                navigator.send('myCommand', { message: 'Hello from the web!' });
+            } else {
+                console.log('PostMessage API not supported.');
+            }
+        }
+    </script>
 </body>
 </html>
