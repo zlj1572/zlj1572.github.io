@@ -1,40 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button to Android App</title>
-    <script>
-        window.addEventListener('message', function(event) {
-            console.log('Received message:', event.data);
-            // 确认消息来源是预期的
-            if (event.origin !== 'https://zlj1572.github.io') return;
-
-            // 处理消息
-            console.log('Received message:', event.data);
-        }, false);
-    </script>
+    <title>TWA Test Suite</title>
+    <link rel="stylesheet" href="../static/css/index.css">
 </head>
 <body>
-    <a href="https://zlj1572.github.io/">
-        <button type="button">Open Android App</button>
-    </a>
-        <button onclick="sendMessage()">Send Message</button>
 
-    <script>
-        function sendMessage() {
-            if (navigator.setMessageHandler) {
-                navigator.setMessageHandler('myCommand', function(data) {
-                    console.log('Received message:', data.data);
-                    // 处理从应用发送回来的消息
-                });
+<div class="header">TWA Test Suite</div>
+<div id="dataReceived" class="content">Data received from app - </div>
+<button onclick="sendDataToApp()">Send data to application</button>
+<button onclick="sendNavigationCommand()">Navigate to another screen</button>
 
-                navigator.send('myCommand', { message: 'Hello from the web!' });
-            } else {
-                console.log('PostMessage API not supported.');
-            }
-        }
-    </script>
+<script src="../index.js"></script>
+
 </body>
 </html>
