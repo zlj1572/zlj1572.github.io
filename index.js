@@ -34,6 +34,7 @@ window.addEventListener("message", function (event) {
     if (typeof port === 'undefined') return;
 
     // Post message on this port.
+    
     console.log('Posting a message to native...');
     port.postMessage("{\"message\":\"connection ack\"}");
 
