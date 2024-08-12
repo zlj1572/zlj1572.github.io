@@ -40,6 +40,7 @@ window.addEventListener("message", function (event) {
 
     // Receive upcoming messages on this port.
     port.onmessage = function(event) {
+        console.log("message",event.data)
         const json = JSON.parse(event.data);
         console.log("json ~> " + JSON.stringify(json));
 
