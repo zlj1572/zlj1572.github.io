@@ -3,18 +3,36 @@
   "relation": ["delegate_permission/common.use_as_origin"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.example.postmessage",
+    "package_name": "com.transsion.aivoiceassistant",
     "sha256_cert_fingerprints":
-    ["C0:BB:74:9C:85:EA:78:F2:DD:90:EA:8F:85:EC:25:41:E5:15:8E:95:39:0F:70:82:70:41:86:4A:5A:32:7E:E8"]
+    ["40:E4:40:0C:5C:90:F7:9D:8F:39:05:84:EE:BA:D8:93:AC:9B:DB:A0:FF:15:07:B1:26:D4:C9:DB:54:79:29:DA"]
   }
 },
   {
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.example.postmessage",
+    "package_name": "com.transsion.aivoiceassistant",
     "sha256_cert_fingerprints":
-    ["C0:BB:74:9C:85:EA:78:F2:DD:90:EA:8F:85:EC:25:41:E5:15:8E:95:39:0F:70:82:70:41:86:4A:5A:32:7E:E8"]
+    ["40:E4:40:0C:5C:90:F7:9D:8F:39:05:84:EE:BA:D8:93:AC:9B:DB:A0:FF:15:07:B1:26:D4:C9:DB:54:79:29:DA"]
+  }
+},
+    {
+  "relation": ["delegate_permission/common.use_as_origin"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.transsion.ella",
+    "sha256_cert_fingerprints":
+    ["40:E4:40:0C:5C:90:F7:9D:8F:39:05:84:EE:BA:D8:93:AC:9B:DB:A0:FF:15:07:B1:26:D4:C9:DB:54:79:29:DA"]
+  }
+},
+  {
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.transsion.ella",
+    "sha256_cert_fingerprints":
+    ["40:E4:40:0C:5C:90:F7:9D:8F:39:05:84:EE:BA:D8:93:AC:9B:DB:A0:FF:15:07:B1:26:D4:C9:DB:54:79:29:DA"]
   }
 }
 ]
